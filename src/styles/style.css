@@ -1,0 +1,373 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-link {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  padding: 10px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #20262E;
+  /* backdrop-filter: blur(4px); */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.app-bar .bar_menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .bar_menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.app-bar .bar_brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .bar_brand img {
+  width: 10rem;
+}
+
+.app-bar .bar_navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #20262E;
+  overflow: hidden;
+}
+
+.app-bar .bar_navigation.open {
+  left: 0;
+}
+
+.app-bar .bar_navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/*
+  Main Content
+*/
+
+main {
+  padding: 0;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content input {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.content .content__heading {
+  font-weight: normal;
+  margin-left: 2rem;
+}
+
+
+/*
+  Cafes
+*/
+
+.cafes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+  padding: 10px 50px;
+}
+
+
+/*
+  Cafe Item
+*/
+
+.cafe-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cafe-item__header {
+  position: relative;
+}
+
+.cafe-item .cafe-item__header .cafe-item__header__poster {
+  width: 100%;
+}
+
+.cafe-item .cafe-item__header .cafe-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.cafe-item .cafe-item__header .cafe-item__header__rating .cafe-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.cafe-item .cafe-item__content {
+  padding: 16px;
+}
+
+.cafe-item .cafe-item__content h3 {
+  margin: 0 0 10px 0;
+}
+
+.cafe-item .cafe-item__content h3 a {
+  color: #db0000;
+  text-decoration: none;
+  padding: 10px 12px;
+}
+
+.cafe-item .cafe-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+
+/*
+  Cafe
+*/
+
+.cafe {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+  margin-top: 2rem;
+}
+
+.cafe .cafe__poster {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.cafe .cafe__info h4 {
+  margin: 8px 0;
+}
+
+.cafe__menu {
+  display: block;
+}
+
+.cafe__menu h3 {
+  text-align: center;
+}
+
+.cafe__menu p {
+  max-width: 200px;
+}
+
+.cafe__menu table {
+  margin-left: 1rem;
+}
+
+.cafe__menu .list {
+  display: grid;
+  padding-top: 5px;
+  gap: 10px;
+}
+
+.list__review p {
+  min-width: 200px;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+.jumbotron {
+  width: 100%;
+  height: 100%;
+  background-image: url(../public/images/heros/hero-image_4.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  /* top: -4.5rem; */
+}
+
+.jumbotron::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  text-align: center;
+  padding: 300px 0 300px;
+  text-shadow: 2px 2px 1px grey;
+}
+
+.title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.about-neangancafe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.figure-neangancafe {
+  flex: 1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.figure-neangancafe img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.figure-neangancafe:hover img {
+  transform: scale(1.2);
+}
+
+.content-neangancafe {
+  flex: 1;
+}
+
+.content-neangancafe .title-neangancafe {
+  font-size: 28px;
+  color: #C07F00;
+}
+
+.content-neangancafe .description-neangancafe {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.content-neangancafe .button-neangancafe {
+  display: inline-block;
+  padding: 13px 8px;
+  background-color: #333;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: 0.3s ease;
+}
+
+.content-neangancafe .button-neangancafe:hover {
+  background-color: #666;
+}
+
+.hr-title {
+  width: 4rem;
+  margin-bottom: .8rem;
+  color: #666;
+}
+
+
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+}
+
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}

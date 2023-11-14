@@ -1,0 +1,115 @@
+@media screen and (max-width: 768px) {
+
+  .about {
+    padding: 0px;
+  }
+
+  .about-neangancafe {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .figure-neangancafe {
+    margin-right: 0px;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-neangancafe .title-neangancafe {
+    font-size: 22px;
+  }
+
+  .content-neangancafe .description-neangancafe {
+    font-size: 12px;
+  }
+
+  .content-neangancafe .button-neangancafe {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .app-bar .bar_brand h1 {
+    font-size: 1.5em;
+  }
+
+  .app-bar .bar_menu {
+    display: none;
+  }
+
+  .app-bar .bar_navigation {
+    position: static;
+    width: 100%;
+  }
+
+  .app-bar .bar_navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .bar_navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cafes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cafe {
+    grid-template-columns: auto 1fr;
+  }
+
+  .cafe .cafe__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .cafe .cafe__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .jumbotron h1 {
+    font-size: 1.5rem;
+    padding: 270px 0 270px;
+  }
+
+  .cafe {
+    max-width: 320px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .app-bar .bar_brand h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .cafes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cafes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .cafes {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
