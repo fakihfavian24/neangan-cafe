@@ -77,6 +77,11 @@
 }
 
 @media screen and (max-width: 380px) {
+
+  .jumbotron {
+    background-image: url(../public/images/heros/hero-image_4-small.jpg);
+  }
+
   .jumbotron h1 {
     font-size: 1.5rem;
     padding: 270px 0 270px;
@@ -94,6 +99,11 @@
   .app-bar .bar_brand h1 {
     font-size: 2em;
   }
+
+  .jumbotron {
+    background-image: url(../public/images/heros/hero-image_4-medium.jpg);
+  }
+
 }
 
 @media screen and (min-width: 850px) {

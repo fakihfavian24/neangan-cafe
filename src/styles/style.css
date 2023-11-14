@@ -13,9 +13,9 @@ body {
 
 .skip-link {
   position: absolute;
-  top: -45px;
+  top: -48px;
   left: 0;
-  padding: 10px;
+  padding: 12px;
   background-color: #bf1722;
   color: white;
   z-index: 100;
@@ -260,7 +260,7 @@ main {
 .jumbotron {
   width: 100%;
   height: 100%;
-  background-image: url(../public/images/heros/hero-image_4.jpg);
+  background-image: url(../public/images/heros/hero-image_4-large.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
